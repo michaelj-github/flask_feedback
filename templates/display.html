@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block title %}User Display Page!{% endblock %}
+{% block content %}
+
+<h1>User Display Page</h1>
+
+
+<table class="feedback_table">
+
+    <tr>
+        <td><p class="label">Name: </p></td>
+        <td>{{ user.first_name }} {{ user.last_name }}</td>
+    </tr>
+<tr>
+    <td><p class="label">Username: </p></td>
+    <td>{{ user.username }}</td>
+</tr>
+<tr>
+    <td><p class="label">email: </p></td>
+    <td>{{ user.email }}</td>
+</tr>
+
+</table>
+
+<form action="/users/{{ user.username }}/delete" method="POST">
+    <button class="button deletebutton" type="submit">Delete your account</button>                
+</form>
+
+<form action="/users/{{ user.username }}/feedback/add">
+    <button class="button addbutton" type="submit">Add some feedback</button>                
+</form>
+
+
+
+{% if user.feedback %}
+  <h2>Here's the feedback you've already submitted</h2>
+
+  <table class="feedback_table">
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+    </tr>
+      {% for feedback in user.feedback %}
+
+      <tr>
+        <td><p class="label">{{feedback.title}}</p></td>
+        <td>{{feedback.content}}</td>
+        <td>
+            <form action="/feedback/{{feedback.id}}/feedback/update" method="GET">
+                <button class="button editbutton" type="submit">Edit</button>                
+            </form>
+            <form action="/feedback/{{feedback.id}}/feedback/delete" method="POST">
+                <button class="button deletebutton" type="submit">Delete</button>                
+            </form>
+        </td>
+      </tr>
+  
+    {% endfor %}
+  
+  </table>
+
+  {% endif %}
+
+{% endblock %}
+

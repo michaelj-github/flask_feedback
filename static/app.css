@@ -1,0 +1,140 @@
+body {
+    background-color: ivory;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h1 {
+    color: blue;
+  }
+  
+  img {
+    max-width: 20%;
+    height: auto;
+  }
+  
+  .main {
+    margin: 20px;
+  }
+  .navbar {
+    background-color: dimgray;
+    overflow: hidden;
+  }
+  
+  .navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .navbar a:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+    color: black;
+  }
+  
+  .nounderline {
+    text-decoration: none;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2px;
+    padding: 2px;
+  }
+  
+  .grid-container > div {
+    text-align: center;
+    padding: 2px 0;
+    font-size: 20px;
+  }
+  
+  .button {
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  
+  .deletebutton {
+    background-color: red;
+  }
+  
+  .editbutton {
+    background-color: blue;
+  }
+  
+  .addbutton {
+    background-color: green;
+  }
+  
+  .cancelbutton {
+    background-color: dimgray;
+  }
+
+  .image {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  .label {
+    text-align: right;
+    font-weight: bold
+  }
+
+  .message {
+    color: blue;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .errmessage {
+    color: red;
+  }
+  
+  .flash {
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    margin: 20px;
+    border-style: solid;;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  .success {
+    color: green
+}
+
+  .primary {
+    color: blue
+  }
+
+  .info {
+    color: black
+  }
+
+  .danger {
+      color: red;
+  }
+
+  .feedback_table {
+    border-style: solid;
+    background-color: white;
+  }
+  
+  .feedback_table td {
+    padding: 20px;
+    vertical-align: middle;
+    border-style: solid;
+  }
